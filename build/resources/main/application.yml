@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: prod
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/likelion_multipartfile?serverTimezone=Asia/Seoul
+    username: root
+    password: eogksakstp@0301
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    open-in-view: false
+
+  servlet:
+    multipart:
+      max-file-size: 10MB  # 최대 파일 업로드 크기
+      max-request-size: 100MB # 최대 요청 크기
+
+file:
+  dir: C:\Users\sonso\OneDrive\바탕 화면\image # 이미지를 저장하기 위한 폴더 경로
