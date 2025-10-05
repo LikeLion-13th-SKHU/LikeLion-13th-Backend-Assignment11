@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: prod
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/likelion_multipartfile?serverTimezone=Asia/Seoul
+    username: root
+    password: Qkrehdwns1!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    open-in-view: false
+
+  servlet:
+    multipart:
+      max-file-size: 10MB  # ?? ?? ??? ??
+      max-request-size: 100MB # ?? ?? ??
+
+file:
+  dir: /Users/dj/Desktop/multipartfile
